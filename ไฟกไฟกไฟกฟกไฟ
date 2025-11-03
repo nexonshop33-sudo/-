@@ -105,6 +105,7 @@ local function fireRemoteForPumpkin(targetPumpkin)
 end
 
 -- 🧭 หาฟักทองและจัดการ
+-- 🧭 หาฟักทองและจัดการ
 local function smashNearestPumpkin()
 	isRunning = true
 
@@ -135,12 +136,16 @@ local function smashNearestPumpkin()
 			hrp.CFrame = targetPumpkin:GetPivot() + Vector3.new(0, 3, 0)
 		end)
 
+		-- 🕒 รอก่อนเริ่มตี 2.5 วินาที
+		task.wait(2.5)
+
 		simulateClickAtPumpkin(targetPumpkin, 10)
 		fireRemoteForPumpkin(targetPumpkin)
 
 		task.wait(0.2)
 	end
 end
+
 
 -- 🧱 GUI SETUP
 local ScreenGui = Instance.new("ScreenGui")
