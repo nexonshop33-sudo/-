@@ -137,7 +137,7 @@ local function smashNearestPumpkin()
 		end)
 
 		-- 🕒 รอก่อนเริ่มตี 2.5 วินาที
-		task.wait(2.5)
+		task.wait(3)
 
 		simulateClickAtPumpkin(targetPumpkin, 10)
 		fireRemoteForPumpkin(targetPumpkin)
